@@ -26,7 +26,7 @@
 body {
   font-family: "Rubik", sans-serif;
   font-size: 18px;
-  /* background-color: var(--Very-dark-blue); */
+  background-color: var(--Very-dark-blue);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,12 +34,13 @@ body {
 main {
   display: grid;
   grid-template-columns: 1fr;
+  justify-items: center;
 }
 .person {
   margin: 81px 24px 24px 24px;
   background-color: var(--Dark-blue);
   width: 87.2vw;
-  max-width: 654px;
+  max-width: 702px;
   height: 203px;
   border-radius: 15px;
   color: white;
@@ -47,6 +48,7 @@ main {
 .details {
   display: flex;
   align-items: center;
+
   background-color: var(--Blue);
   border-radius: 15px;
   height: 133px;
@@ -78,20 +80,27 @@ main {
   line-height: 21px;
   text-align: center;
   color: #7078c9;
+  padding: 10px;
 }
+.timeFrame p:hover {
+  cursor: pointer;
+  color: white;
+}
+
 .work,
 .play,
 .study,
 .exercise,
 .social,
 .selfCare {
-  width: 327px;
+  width: 87.2vw;
   height: 160px;
-  margin: 24px;
+  margin-bottom: 24px;
   border-radius: 15px;
   color: white;
   position: relative;
 }
+
 .work {
   background: url("images/icon-work.svg ") no-repeat right top;
   background-color: var(--Light-red-work);
@@ -123,10 +132,47 @@ main {
   bottom: 0;
   width: 100%;
   height: 127px;
+  padding: 28px 24px;
+}
+.activity:hover {
+  cursor: pointer;
+  background-color: hsl(235, 46%, 30%);
+}
+.type,
+.times {
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon img {
+  padding: 10px 5px;
+}
+.icon img:hover {
+  filter: brightness(10);
+  cursor: pointer;
+}
+.times div:nth-child(1) {
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 38px;
+  margin-right: 15px;
+}
+.times div:nth-child(2) {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--Pale-Blue);
+  text-align: right;
+}
+.type p {
+  font-weight: 500;
+  line-height: 21px;
 }
 .atribution {
   font-size: 11px;
   text-align: center;
+  color: white;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -138,4 +184,40 @@ main {
   .person {
     grid-column: 1/3;
   }
+  .details {
+    justify-content: left;
+    align-items: center;
+  }
+  .details > div {
+    margin-left: 2vw;
+  }
+  .details img {
+    margin-left: 4vw;
+    max-width: 75px;
+  }
+  .name div {
+    font-size: 37px;
+    padding-top: 0.5vw;
+  }
+  .work,
+  .play,
+  .study,
+  .exercise,
+  .social,
+  .selfCare {
+    width: 43.6vw;
+    max-width: 327px;
+  }
 }
+/*
+@media (min-width: 800px) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .person {
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+}
+*/
