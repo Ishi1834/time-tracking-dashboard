@@ -170,10 +170,10 @@ main {
   font-weight: 500;
   line-height: 21px;
 }
-.atribution {
-  font-size: 11px;
+.attribution {
+  font-size: 14px;
   text-align: center;
-  color: white;
+  color: ghostwhite;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
